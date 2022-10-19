@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace ConnorLuck 
+{ 
+
+
 public class CrewMates : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        [Header("Application")]
+        private string crewName;
+        private string crewHobby;
+
+        private void Start()
+        {
+            
+        }
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
