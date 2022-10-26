@@ -6,21 +6,15 @@ namespace ConnorLuck
 { 
 
 
-public class CrewMates : MonoBehaviour
-{
+    public class CrewMates : MonoBehaviour
+    {
+        private string[] crewMatesArray = new string[10] { "Brock", "Misty", "Lt.Surge", "Erika", "Koga", "Sabrina", "Blaine", "Giovanni", "Red", "Blue" };
 
-        private CrewMates prefab;
-
-
-        private List<CrewMates>
-        string[] values = new string[10] { "Mark", "Matthew", "Luke", "John", "Judas", "Noah", "Jesus", "Mary", "Joseph", "Willy" };
+        private List<string> crewMatesList = new List<string>() { "Brock", "Misty", "Lt.Surge", "Erika", "Koga", "Sabrina", "Blaine", "Giovanni", "Red", "Blue" };
 
         private void Start()
         {
-            foreach (string value in values)
-            {
-                foreach (CrewMates crewMates in ship);
-            }
+            foreach (string)
         }
 
 
