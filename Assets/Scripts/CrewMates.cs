@@ -8,17 +8,18 @@ namespace ConnorLuck
 
 public class CrewMates : MonoBehaviour
 {
-        [Header("Application")]
-        [SerializeField] public 
-        private string crewName;
-        private string crewHobby;
-        private bool parasite = false;
+
+        private CrewMates prefab;
+
+
+        private List<CrewMates> ship;
+        private string[] values = new string[10] { "Mark", "Matthew", "Luke", "John", "Judas", "Noah", "Jesus", "Mary", "Joseph", "Willy" };
 
         private void Start()
         {
-            switch (switch_on)
+            foreach (string value in values)
             {
-                default:
+                foreach (CrewMates crewMates in ship)
             }
         }
 
