@@ -14,7 +14,10 @@ namespace ConnorLuck
 
         private void Start()
         {
-            foreach (string)
+            foreach (string crewMates in crewMatesArray) ;
+             
+
+
         }
 
 
