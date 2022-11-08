@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,14 @@ namespace ConnorLuck
 
         private void Start()
         {
-            foreach (string crewMates in crewMatesArray) ;
-             
+            //foreach string in crewMatesarray call random name
+            foreach (var item in crewMatesArray)
+            {
 
+                Console.WriteLine(crewMatesArray);
+                
+            }
+              
 
         }
 

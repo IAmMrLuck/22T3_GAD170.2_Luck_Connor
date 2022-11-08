@@ -11,12 +11,17 @@ public class UI : MonoBehaviour
     public Button reject;
     public Button accept;
 
-
-    // Start is called before the first frame update
+  
     void Start()
     {
-        mainText.text = "test";
+        /*mainText.text = "test";
         reject.GetComponentInChildren<Text>().text = "Reject!";
         accept.GetComponentInChildren<Text>().text = "Accept :)";
+        */
+
+       
     }
+
+    
 }
+
