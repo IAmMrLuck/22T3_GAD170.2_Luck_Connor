@@ -10,17 +10,11 @@ namespace ConnorLuck
 
     public class CrewMates : MonoBehaviour
     {
-        public void CallNextCrewMate(string newName, string newHobby, int newPrice)
-        {
-            name = newName;
-            hobby = newHobby;
-           
-        }
+    
 
         // creating a list of names for the game by using an array and a list
         // this is not needed 
         // string[] crewMatesArray = new string[10] { "Brock", "Misty", "Lt.Surge", "Erika", "Koga", "Sabrina", "Blaine", "Giovanni", "Red", "Blue" };
-
 
         private List<string> crewMatesList = new List<string>() { "Brock", "Misty", "Lt.Surge", "Erika", "Koga", "Sabrina", "Blaine", "Giovanni", "Red", "Blue" };
 
@@ -30,7 +24,16 @@ namespace ConnorLuck
         //do not need both an array and a list - instantiating 
         //private List<string> realHobbiesList = new List<string>() { "Bouldering", "Swimming", "Electrical", "Gardening", "Ninjas", "Magic Tricks", "Fire Breathing", "Organised Crime", "Being the Best", "Being the Worst" };
 
-     
+
+        public void CallNextCrewMate(string newName, string newHobby, string newFakeHobby)
+        {
+
+            // this is the method to call the crew mates names and hobbies
+            name = newName;
+            //hobby = newHobby;
+            //fakeHobby = newFakeHobby;
+
+        }
 
         private void Start()
         {

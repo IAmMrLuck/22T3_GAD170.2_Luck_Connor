@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonTest : MonoBehaviour
 {
     // used for testing the functionality of the buttons
+    // have now added functionaity to the text box on screen
 
     int n;
+    public Text myText;
     public void OnButtonPress()
     {
         n++;
-        Debug.Log("Clicked " + n + " times.");
+        myText.text = "Clicked " + n + " times.";
+
     }
 }
