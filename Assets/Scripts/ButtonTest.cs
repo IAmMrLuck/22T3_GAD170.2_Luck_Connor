@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonTest : MonoBehaviour
 {
     // used for testing the functionality of the buttons
-    // have now added functionaity to the text box on screen
+    // have now added functionaity to the text box on screen - still working on that
 
     int n;
     public Text myText;
