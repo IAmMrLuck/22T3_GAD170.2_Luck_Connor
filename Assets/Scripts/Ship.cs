@@ -7,6 +7,8 @@ using ConnorLuck;
 
 public class Ship : MonoBehaviour
 {
+
+
     private List<CrewMates> shipList = new List<CrewMates>();
 
     private void Start()

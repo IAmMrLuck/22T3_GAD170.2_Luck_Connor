@@ -1,8 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using Unity.VisualScripting;
+using Random = UnityEngine.Random;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,12 +10,23 @@ namespace ConnorLuck
     public class FullName : MonoBehaviour
 
     {
+        // this string is used the forecah loop 
         public string value;
       
     }
     public class CrewMate : MonoBehaviour
     {
 
+        // set up string list for using in the foreach loop whic will populate in the TextBox when the Crew Application is clicked
+        public void SetStringStore(string[] newName, string[] newHobby, string[] fakeHobby, bool isParasite)
+        {
+            names = newName;
+            trueHobbies = newHobby;
+            falseHobbies = fakeHobby;
+            parasite = isParasite;
+
+        }
+       
         public Text mainText;
 
         [SerializeField] FullName CrewMatesPrefab;
@@ -30,19 +40,16 @@ namespace ConnorLuck
         public string[] falseHobbies = new string[4] { "The Water", "The Air", "The Fire", "The Earth" };
         // the boolean for parasite
         bool parasite = false;
+        // an int stored to get a random range later
+        int myInt = 0;
 
-
-        private void Start()
-        {
-            mainText.text = FullName.crew;
-            
-        }
 
         public void OnCrewClick()
         {
 
-            crew = new List<FullName>();
+            parasite = myInt > 11;
 
+            crew = new List<FullName>();
 
             foreach (string value in names)
             {
@@ -54,11 +61,24 @@ namespace ConnorLuck
 
             }
 
-            // if int > 8 then parasite
+            int randomNumber;
+            int lastNumber;
+            int maxAttempts = 15; // the number of rounds (0-15)
 
-            if (!parasite)
-
+            void Update()
+            { // I have asked the code to check that it will not reuse a number more than once, to assist in cycling through the 16 hobby options
+                for (int i = 0; randomNumber == lastNumber && i < maxAttempts; i++)
+                {
+                    randomNumber = Random.Range(0, 15);
+                }
+                lastNumber = randomNumber;
+            }
+            // if int > 11 then parasite - because the system will include 0
+            // the code is first checking if myInt is a number which is greater than 11 (12, 13, 14, 15)
+            if (parasite)
             {
+
+                // once the code has decided on the number, if it is higher than 11 it will add a falseHobby to the CrewMate
                 foreach (string value in falseHobbies)
                 {
                     FullName newCrew = Instantiate(CrewMatesPrefab, transform);
@@ -90,16 +110,10 @@ namespace ConnorLuck
 
         public void OnAcceptClick()
         {
-            
-        }
-        /*
-        public void SetInitialStats(string newName, string newHobby, int isParasite)
-        {
-            name = newName;
-            hobby = newHobby;
-            parasite = isParasite;
+            // collect the gameobject and store it 
 
-        }*/
+        }
+
 
     }
 }
