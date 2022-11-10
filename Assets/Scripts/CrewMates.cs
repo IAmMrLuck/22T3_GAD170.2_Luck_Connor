@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
+// this was an old script which got a little out of hand 
+// so i have changed the name to CrewMate(s) and started fresh
+// I have elected not to remove any working which did not benefit my scripts - for the purposes of growth and learning
+
 namespace ConnorLuck 
 { 
-    // I have elected not to remove any working which did not benefit my scripts - for the purposes of growth and learning
+   
 
     public class CrewMates : MonoBehaviour
     {
