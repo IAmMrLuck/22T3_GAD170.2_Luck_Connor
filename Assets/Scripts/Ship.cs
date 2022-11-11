@@ -28,32 +28,24 @@ namespace ConnorLuck
 
         public List<CrewMate> CrewMatesList = new List<CrewMate>();
 
-        public void SetStringStore(string newName, string newHobby, string fakeHobby, bool isParasite)
-        {
-            names = newName;
-            trueHobbies = newHobby;
-            falseHobbies = fakeHobby;
-            parasite = isParasite;
-        }
+ 
         // used to reference as OnClick() in the inspector
         public void OnCrewClick()
         {
             newCrewMateGO = Instantiate(CrewMates);
             newCrewMate = newCrewMateGO.GetComponent<CrewMate>();
-            Console.WriteLine(newCrewMate);
+
         }
         // used to reference as OnClick() in the inspector
         public void OnRejectClick()
         {
             Destroy(newCrewMate.gameObject);
-            Console.WriteLine("You Rejected this applicant");
         }
         // used to reference as OnClick() in the inspector
         public void OnAcceptClick()
         {
 
             CrewMatesList.Add(newCrewMate);
-            Console.WriteLine("You have Accepted this applicant");
 
         }
 
