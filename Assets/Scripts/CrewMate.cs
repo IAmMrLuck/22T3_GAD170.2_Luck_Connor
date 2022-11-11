@@ -9,7 +9,7 @@ namespace ConnorLuck
 {
     public class FullName : MonoBehaviour
     {
-        // this string is used the forecah loop 
+        // this string is used the foreach loop 
         public string value;
     }
     public class CrewMate : MonoBehaviour

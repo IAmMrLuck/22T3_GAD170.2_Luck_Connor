@@ -40,6 +40,7 @@ namespace ConnorLuck
         {
             newCrewMateGO = Instantiate(CrewMates);
             newCrewMate = newCrewMateGO.GetComponent<CrewMate>();
+            Text = newCrewMate;
         }
         // used to reference as OnClick() in the inspector
         public void OnRejectClick()
