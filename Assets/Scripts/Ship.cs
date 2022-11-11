@@ -40,18 +40,20 @@ namespace ConnorLuck
         {
             newCrewMateGO = Instantiate(CrewMates);
             newCrewMate = newCrewMateGO.GetComponent<CrewMate>();
-            Text = newCrewMate;
+            Console.WriteLine(newCrewMate);
         }
         // used to reference as OnClick() in the inspector
         public void OnRejectClick()
         {
             Destroy(newCrewMate.gameObject);
+            Console.WriteLine("You Rejected this applicant");
         }
         // used to reference as OnClick() in the inspector
         public void OnAcceptClick()
         {
 
             CrewMatesList.Add(newCrewMate);
+            Console.WriteLine("You have Accepted this applicant");
 
         }
 
