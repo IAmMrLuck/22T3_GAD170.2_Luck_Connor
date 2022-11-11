@@ -128,7 +128,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8822890180610406344, guid: ea62714c683256d4fa2ff73616df2452, type: 3}
   m_PrefabInstance: {fileID: 2117228826361542787}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &70477439
+--- !u!114 &70477440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,9 +137,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 70477437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e12ba3e1a020dd46892674cc75a9fae, type: 3}
+  m_Script: {fileID: 11500000, guid: ec74da99b527cda4783f1d59db78c47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CrewMates: {fileID: 70477437}
+--- !u!114 &70477441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70477437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7beda16fb650c1c46a8a08ec7bd607f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainText: {fileID: 0}
+  CrewMatesPrefab: {fileID: 0}
+  crew: []
+  names:
+  - Brock
+  - Misty
+  - Lt.Surge
+  - Erika
+  - Koga
+  - Sabrina
+  - Blaine
+  - Giovanni
+  - Lorelei
+  - Bruno
+  - Agatha
+  - Lance
+  trueHobbies:
+  - Rock Climbing
+  - Swimming
+  - Electrical Engineering
+  - Gardening
+  - Ninjas
+  - Magic Tricks
+  - Fire Breathing
+  - Crime Boss
+  - Ice Skating
+  - Weight Lifting
+  - Ghost hunting
+  - Dragon Taming
+  falseHobbies:
+  - The Water
+  - The Air
+  - The Fire
+  - The Earth
 --- !u!1 &159507197
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,13 +271,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 70477440}
+        m_TargetAssemblyTypeName: ConnorLuck.Ship, Assembly-CSharp
+        m_MethodName: OnAcceptClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -684,7 +731,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'big '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -980,9 +1027,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonTest, Assembly-CSharp
-        m_MethodName: OnButtonPress
+      - m_Target: {fileID: 70477440}
+        m_TargetAssemblyTypeName: ConnorLuck.Ship, Assembly-CSharp
+        m_MethodName: OnRejectClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1114,10 +1161,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 70477439}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 70477440}
+        m_TargetAssemblyTypeName: ConnorLuck.Ship, Assembly-CSharp
+        m_MethodName: OnCrewClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
