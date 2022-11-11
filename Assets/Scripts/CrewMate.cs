@@ -22,7 +22,7 @@ namespace ConnorLuck
        
         public Text mainText;
 
-        [SerializeField] FullName CrewMatesPrefab;
+        [SerializeField] FullName CrewMates;
 
         [SerializeField] public List<FullName> crew;
         // list of names to be called by the foreach statement below
@@ -47,7 +47,7 @@ namespace ConnorLuck
 
                 foreach (string value in names)
                 {
-                    FullName newCrew = Instantiate(CrewMatesPrefab, transform);
+                    FullName newCrew = Instantiate(CrewMates);
 
                     newCrew.name = value;
 
@@ -76,7 +76,7 @@ namespace ConnorLuck
                     // once the code has decided on the number, if it is higher than 11 it will add a falseHobby to the CrewMate
                     foreach (string value in falseHobbies)
                     {
-                        FullName newCrew = Instantiate(CrewMatesPrefab, transform);
+                        FullName newCrew = Instantiate(CrewMates);
 
                         newCrew.name = value;
 
@@ -88,7 +88,7 @@ namespace ConnorLuck
                 {
                     foreach (string value in trueHobbies)
                     {
-                        FullName newCrew = Instantiate(CrewMatesPrefab, transform);
+                        FullName newCrew = Instantiate(CrewMates);
 
                         newCrew.name = value;
 

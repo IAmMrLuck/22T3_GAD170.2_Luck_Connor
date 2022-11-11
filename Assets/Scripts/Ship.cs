@@ -19,7 +19,7 @@ namespace ConnorLuck
             Textfield.text = text;
         }
 
-        public GameObject CrewMates;
+        public GameObject CrewMatesPrefab;
         private string names;
         private string trueHobbies;
         private string falseHobbies;
@@ -37,14 +37,14 @@ namespace ConnorLuck
         // used to reference as OnClick() in the inspector
         public void OnCrewClick()
         {
-            Instantiate(CrewMates);
+            Instantiate(CrewMatesPrefab);
 
         }
 
         // used to reference as OnClick() in the inspector
         public void OnRejectClick()
         {
-            Destroy(CrewMates);
+            Destroy(CrewMatesPrefab);
         }
         // used to reference as OnClick() in the inspector
         public void OnAcceptClick()
