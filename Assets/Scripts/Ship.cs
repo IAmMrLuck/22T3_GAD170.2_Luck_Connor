@@ -50,7 +50,7 @@ namespace ConnorLuck
         public void OnAcceptClick()
         {
             // collect the gameobject and store it 
-
+            // Collect(CrewMates);
         }
 
     }
