@@ -18,13 +18,15 @@ namespace ConnorLuck
         {
             Textfield.text = text;
         }
-
-        public GameObject CrewMatesPrefab;
+        public GameObject CrewMates;
         private string names;
         private string trueHobbies;
         private string falseHobbies;
         bool parasite = false;
-        
+        private CrewMate newCrewMate;
+        private GameObject newCrewMateGO;
+
+        public List<CrewMate> CrewMatesList = new List<CrewMate>();
 
         public void SetStringStore(string newName, string newHobby, string fakeHobby, bool isParasite)
         {
@@ -32,25 +34,24 @@ namespace ConnorLuck
             trueHobbies = newHobby;
             falseHobbies = fakeHobby;
             parasite = isParasite;
-
         }
         // used to reference as OnClick() in the inspector
         public void OnCrewClick()
         {
-            Instantiate(CrewMatesPrefab);
-
+            newCrewMateGO = Instantiate(CrewMates);
+            newCrewMate = newCrewMateGO.GetComponent<CrewMate>();
         }
-
         // used to reference as OnClick() in the inspector
         public void OnRejectClick()
         {
-            Destroy(CrewMatesPrefab);
+            Destroy(newCrewMate.gameObject);
         }
         // used to reference as OnClick() in the inspector
         public void OnAcceptClick()
         {
-            // collect the gameobject and store it 
-            // Collect(CrewMates);
+
+            CrewMatesList.Add(newCrewMate);
+
         }
 
     }
